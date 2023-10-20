@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
 
-  let post = '선유도 맛집 리스트 222';
+  let post = '포스트 제목';
 
   return (
     <div className="App">
