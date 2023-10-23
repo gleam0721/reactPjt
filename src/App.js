@@ -12,6 +12,7 @@ function App() {
   let post = '포스트 제목';
   let [글제목, 글제목변경] = useState(['남자코트 추천','강남 우동맛집','파이썬독학']); 
   let [따봉, 따봉변경] = useState(0);
+  let [modal, setModal] = useState(false);
 
   return (
     <div className="App">
@@ -40,11 +41,19 @@ function App() {
         <p>10월 23일 발행</p>
       </div>
       <div className='list'>
-        <h4>{ 글제목[2] }</h4>
+        <h4 onClick={()=>{
+          if(modal == true){
+            setModal(false)
+          } else{
+            setModal(true)
+          }
+         }}>{ 글제목[2] }</h4>
         <p>10월 23일 발행</p>
       </div>
 
-      <Modal></Modal>
+      {
+        modal == true ? <Modal/> : null
+      }
 
     </div>
   );
