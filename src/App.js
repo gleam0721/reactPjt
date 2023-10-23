@@ -43,8 +43,29 @@ function App() {
         <h4>{ 글제목[2] }</h4>
         <p>10월 23일 발행</p>
       </div>
+
+      <Modal></Modal>
+
     </div>
   );
 }
+
+/*
+  컴포넌트
+  1. 반복되는 html 축약시
+  2. 큰 페이지들
+  3. 자주 변경되는애들(성능상 도움이 됨 (모두 다는 아님))
+ */
+
+function Modal(){
+  return(
+    <div className='modal'>
+        <h4>제목</h4>
+        <p>날짜</p>
+        <p>상세내용</p>
+      </div>
+  )
+}
+
 
 export default App;
